@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/color_back_grey">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/app_bar"
+        android:background="@color/main_color_blue">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:layout_centerInParent="true"
+            android:textSize="20sp"
+            android:textColor="@color/color_white"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    </RelativeLayout>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--app:tabMode - fixed: 固定tab的位置，当tab数量过多时，超出屏幕范围后。无法显示更多。
+               scrollable: tab数量超出屏幕范围，可以滚动tab，显示更多的tab-->
+        <!-- app:tabTextAppearance="@style/design_widget_TabLayout_TextStyle"-->
+        <!-- app:tabIndicatorColor="@color/white"                 // 下方滚动的下划线颜色-->
+        <!--app:tabSelectedTextColor="@color/gray"               // tab被选中后，文字的颜色-->
+        <!--app:tabTextColor="@color/white"                      // tab默认的文字颜色-->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_find_fragment_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--app:tabMode="scrollable"-->
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/tab_find_fragment_find_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</LinearLayout>

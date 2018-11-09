@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_art_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_item_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/head"/>
+
+        <LinearLayout
+            android:id="@+id/ll_item_con"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/iv_item_img"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:id="@+id/tv_art_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_black"
+                android:textSize="18dp"
+                android:text="奥巴马就职演讲"
+                android:singleLine="true"/>
+
+            <TextView
+                android:id="@+id/tv_art_brief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_text_grey"
+                android:layout_marginTop="4dp"
+                android:textSize="15dp"
+                android:text="@string/test_brief"
+                android:maxLines="2"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+</RelativeLayout>
